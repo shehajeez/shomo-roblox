@@ -10,7 +10,7 @@ local espConfig = {
     tag = false,
     -- ESP Behaviour
     locktocursor = false,
-    renderrange = 99999999,
+    renderrange = 100000,
     teamcheck = false,
     -- ESP Color
     rainbowcolor = false,
