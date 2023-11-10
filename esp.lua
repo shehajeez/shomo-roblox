@@ -64,17 +64,12 @@ local function getESPColor(playerinstance)
     if espConfig.rainbowcolor then
         return espConfig.rainbowcs or Color3.fromRGB(espConfig.setcolor[1], espConfig.setcolor[2], espConfig.setcolor[3]);
     elseif espConfig.teamcolor then
-        if isMM2 then
-            return (findMurder() == playerinstance and Color3.fromRGB(255, 0, 0))
-            or (findSheriff() == playerinstance and Color3.fromRGB(0, 0, 255))
-            or Color3.fromRGB(espConfig.setcolor[1], espConfig.setcolor[2], espConfig.setcolor[3])
-        else
-            return playerinstance.TeamColor.Color or Color3.fromRGB(espConfig.setcolor[1], espConfig.setcolor[2], espConfig.setcolor[3]) or Color3.fromRGB(255,255,255);
-        end
+        return playerinstance.TeamColor.Color or Color3.fromRGB(espConfig.setcolor[1], espConfig.setcolor[2], espConfig.setcolor[3]) or Color3.fromRGB(255,255,255);
     elseif espConfig.setcolor then
         return Color3.fromRGB(espConfig.setcolor[1], espConfig.setcolor[2], espConfig.setcolor[3]);
     end
 end
+
 
 local function getTracerPoint()
     if espConfig.locktocursor then
